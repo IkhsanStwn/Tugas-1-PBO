@@ -11,11 +11,11 @@ public class Lingkaran implements Bidang2D {
 
     @Override
     public double hitungKeliling() {
-        return  2*PHI*r;
+        return r * 2 * PHI;
     }
 
     @Override
     public double hitungLuas() {
-        return  PHI*Math.pow(r,2);
+        return Math.pow(r,2)*PHI;
     }
 }

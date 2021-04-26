@@ -12,10 +12,10 @@ public class Bola extends Lingkaran {
 
     @Override
     public double hitungLuas() {
-        return 4 * super.luas;
+        return 4 * super.hitungLuas();
     }
 
     public double hitungVolume() {
-        return (4 * super.luas * super.r) / 3;
+        return (4 * super.hitungLuas() * r) / 3;
     }
 }

@@ -2,6 +2,7 @@ package ruang3D;
 
 public class TemberengBola extends Bola {
     public double rDasar, rAtas, tinggi, luas, volume;
+
     public TemberengBola(double r, double tinggi, double rAtas, double rDasar) {
         super(r);
         this.tinggi=tinggi;

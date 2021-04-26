@@ -13,11 +13,10 @@ public class Tabung extends Lingkaran{
 
     @Override
     public double hitungLuas() {
-        return super.keliling * (r + this.tinggi);
+        return super.keliling * (r + tinggi);
     }
 
     public double hitungVolume() {
         return super.hitungLuas()*tinggi;
     }
-
 }
