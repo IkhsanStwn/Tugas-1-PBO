@@ -2,21 +2,22 @@ package ruang3D;
 import bidang2D.Lingkaran;
 
 public class Tabung extends Lingkaran{
-    public double tinggi;
+    public double tinggi, luas, volume;
 
-    public Tabung(double r, double keliling, double luas, double tinggi) {
-        super(r, keliling, luas);
+    public Tabung(double r, double tinggi) {
+        super(r);
         this.tinggi = tinggi;
+        this.luas=hitungLuas();
+        this.volume=hitungVolume();
     }
 
+    @Override
     public double hitungLuas() {
-        double luasTabung = keliling * (r + tinggi);
-        return luasTabung;
+        return super.keliling * (r + this.tinggi);
     }
 
     public double hitungVolume() {
-        //volumeTabung= luas*tinggi;
-        return luas*tinggi;
+        return super.luas*tinggi;
     }
 
 }

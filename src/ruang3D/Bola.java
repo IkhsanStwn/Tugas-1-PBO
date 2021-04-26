@@ -1,19 +1,21 @@
 package ruang3D;
 import bidang2D.Lingkaran;
 
-public class Bola extends Lingkaran{
-    public Bola(double r, double keliling, double luas){
-        super(r,keliling,luas);
+public class Bola extends Lingkaran {
+    public double luas, volume;
+
+    public Bola(double r) {
+        super(r);
+        this.luas = hitungLuas();
+        this.volume = hitungVolume();
     }
 
-    public double hitungLuas(){
-        double luasBola = 4 * luas;
-        return luasBola;
+    @Override
+    public double hitungLuas() {
+        return 4 * super.luas;
     }
 
-    public double hitungVolume(){
-        double volumeBola = (4/3)*luas*r;
-        return volumeBola;
+    public double hitungVolume() {
+        return 4 * super.luas * super.r / 3;
     }
-
 }

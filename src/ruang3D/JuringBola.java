@@ -1,16 +1,20 @@
 package ruang3D;
 
 public class JuringBola extends Bola {
-    JuringBola(double r, double keliling, double luas) {
-        super(r, keliling, luas);
+    public double rDasar, tinggi, luas, volume;
+    public JuringBola(double r, double tinggi, double rDasar) {
+        super(r);
+        this.rDasar=rDasar;
+        this.tinggi=tinggi;
+        this.luas=hitungLuas();
+        this.volume=hitungVolume();
     }
 
     public double hitungLuas(){
-        //luasCincin=
-        return 0;
+        return 2 * PHI * r * tinggi + PHI * rDasar * r;
     }
 
     public double hitungVolume(){
-        return 0;
+        return 2/3 * PHI * Math.pow(r,2) * tinggi;
     }
 }

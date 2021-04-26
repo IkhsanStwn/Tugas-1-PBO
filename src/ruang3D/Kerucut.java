@@ -2,29 +2,25 @@ package ruang3D;
 import bidang2D.Lingkaran;
 
 public class Kerucut extends Lingkaran{
-    double tinggi, selimut;
-    public Kerucut(double r, double keliling, double luas){
-        super(r,keliling,luas);
+    public double tinggi, luas, volume;
+
+    public Kerucut(double r, double tinggi){
+        super(r);
+        this.tinggi=tinggi;
+        this.luas=hitungLuas();
+        this.volume=hitungVolume();
     }
 
     public double apotema(){
-        //selimut = Math.sqrt(Math.pow(r,2) + Math.pow(tinggi,2));
-        return selimut;
+        return Math.sqrt(Math.pow(this.r,2) + Math.pow(this.tinggi,2));
     }
 
-
-    public double hitungKeliling(){
-
-        return 0;
-    }
-
+    @Override
     public double hitungLuas(){
-        double luasKerucut = luas + (PHI*r*selimut);
-        return luasKerucut;
+        return super.luas + (PHI*this.r*apotema());
     }
 
     public double hitungVolume(){
-        //volumeKerucut = luas*tinggi/3;
-        return luas*tinggi/3;
+        return super.luas*this.tinggi/3;
     }
 }

@@ -1,16 +1,23 @@
 package ruang3D;
 
 public class TemberengBola extends Bola {
-    TemberengBola(double r, double keliling, double luas) {
-        super(r, keliling, luas);
+    public double rDasar, rAtas, tinggi, luas, volume;
+    public TemberengBola(double r, double tinggi, double rAtas, double rDasar) {
+        super(r);
+        this.tinggi=tinggi;
+        this.rAtas=rAtas;
+        this.rDasar=rDasar;
+        this.luas=hitungLuas();
+        this.volume=hitungVolume();
     }
 
+    @Override
     public double hitungLuas(){
-        //luasCincin=
-        return 0;
+        return PHI * (2 * r * tinggi + Math.pow(rDasar,2));
     }
 
+    @Override
     public double hitungVolume(){
-        return 0;
+        return PHI * tinggi * (3 * Math.pow(rDasar,2) + 3 * Math.pow(rAtas,2) + Math.pow(tinggi,2));
     }
 }
