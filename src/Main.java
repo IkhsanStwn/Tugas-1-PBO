@@ -7,7 +7,7 @@ import ruang3D.*;
 public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        double r, tinggi=0, rAtas=0, rDasar=0, taliBusur=0;
+        double r, tinggi=0, rAtas=0, rDasar=0, rPuncak=0,taliBusur=0;
         int pilih;
 
         System.out.println("Tugas Geometri");
@@ -123,7 +123,7 @@ public class Main {
                             {
                                 System.out.println("--3. Keratan Bola--");
 
-                                KeratanBola keratanBola = new KeratanBola(r,rDasar,rAtas,tinggi);
+                                KeratanBola keratanBola = new KeratanBola(r,rDasar,rPuncak,tinggi);
 
                                 System.out.println("Luas = " + keratanBola.hitungLuas());
                                 System.out.println("Volume = " + keratanBola.hitungVolume());
@@ -132,7 +132,7 @@ public class Main {
                             {
                                 System.out.println("--4. Cincin Bola--");
 
-                                CincinBola cincinBola = new CincinBola(r,taliBusur,tinggi,rAtas,rDasar);
+                                CincinBola cincinBola = new CincinBola(r,taliBusur,tinggi,rPuncak,rDasar);
 
                                 System.out.println("Luas = " + cincinBola.hitungLuas());
                                 System.out.println("Volume = " + cincinBola.hitungVolume());

@@ -16,6 +16,6 @@ public class Bola extends Lingkaran {
     }
 
     public double hitungVolume() {
-        return 4 * super.luas * super.r / 3;
+        return (4 * super.luas * super.r) / 3;
     }
 }

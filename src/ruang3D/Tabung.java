@@ -17,7 +17,7 @@ public class Tabung extends Lingkaran{
     }
 
     public double hitungVolume() {
-        return super.luas*tinggi;
+        return super.hitungLuas()*tinggi;
     }
 
 }

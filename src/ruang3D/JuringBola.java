@@ -15,6 +15,6 @@ public class JuringBola extends Bola {
     }
 
     public double hitungVolume(){
-        return 2/3 * PHI * Math.pow(r,2) * tinggi;
+        return (2 * PHI * Math.pow(r,2) * tinggi)/3;
     }
 }
