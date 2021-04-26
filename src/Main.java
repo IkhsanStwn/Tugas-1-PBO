@@ -140,7 +140,6 @@ public class Main {
                             default:
                                 throw new IllegalStateException("Unexpected value: " + pilih);
                         }
-
                     } break;
 
                     default:
